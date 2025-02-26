@@ -1,0 +1,21 @@
+services:
+  mysql:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: 'root'
+      MYSQL_DATABASE: 'db'
+    volumes:
+      - ./database_students.sql:/docker-entrypoint-initdb.d/database_students.sql
+    ports:
+      - "3307:3306" 
+
+  pythonapp:
+    build: .
+    depends_on:
+      - mysql
+    ports:
+      - "4000:5000"
+    volumes:
+      - .:/app
+    environment:
+      FLASK_ENV: devel

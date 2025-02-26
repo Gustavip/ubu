@@ -10,3 +10,6 @@ CREATE TABLE students(
 
 INSERT INTO students(FirstName, Surname)
 VALUES("John", "Andersen"), ("Emma", "Smith");
+
+
+ 
