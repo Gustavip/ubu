@@ -5,7 +5,7 @@ WORKDIR /app
 #COPIA DE ARCHIVOS ##COMO EL GIT CLON
 COPY . /app
 #INSTALACION DE DEPENDENCIAS
-RUN pip install --no--cache-dir -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 #PUERTO DE TRABAJO
 EXPOSE 5000
 #COMANDO PARA EJECUTAR LA APLICACION
